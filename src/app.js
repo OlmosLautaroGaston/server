@@ -6,7 +6,7 @@ import 'babel-polyfill';
 
 import { createRoles } from "./libs/initialSetup";
 
-import productsRoutes from "./routes/products.routes";
+import contentsRoutes from "./routes/contents.routes";
 import authRoutes from "./routes/auth.routes";
 import usersRoutes from "./routes/user.routes";
 
@@ -22,7 +22,7 @@ app.use(cors());
 app.use(express.json()); //utilizar strings a travéz de json
 
 // routes
-app.use("/api/products", productsRoutes); //usa la ruta de navegación para llamar al archivo js
+app.use("/api/contents", contentsRoutes); //usa la ruta de navegación para llamar al archivo js
 app.use("/api/auth", authRoutes);
 app.use("/api/users", usersRoutes);
 

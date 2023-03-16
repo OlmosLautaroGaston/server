@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-const productSchema = new Schema(
+const contentSchema = new Schema(
   {
     company: String,
     position: String,
@@ -12,4 +12,4 @@ const productSchema = new Schema(
     versionKey: false,
   }
 );
-export default model("Product", productSchema);
+export default model("Content", contentSchema);
