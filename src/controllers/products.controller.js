@@ -2,38 +2,16 @@ import Product from "../models/Products";
 
 export const createProduct = async (req, res) => {
   const {
-    title,
-    category,
-    content,
-    domicilio,
-    repartoadomicilio,
-    telefono,
-    mapa,
-    facebook,
-    instragram,
-    web,
-    ofertas,
-    diasyhorarios,
-    mail,
-    url,
-    imgCarousel,
+    company,
+    position,
+    duration,
+    responsabilities
   } = req.body; //destructuring - obteniendo datos del body
   const newProduct = new Product({
-    title,
-    category,
-    content,
-    domicilio,
-    repartoadomicilio,
-    telefono,
-    mapa,
-    facebook,
-    instragram,
-    web,
-    ofertas,
-    diasyhorarios,
-    mail,
-    url,
-    imgCarousel,
+    company,
+    position,
+    duration,
+    responsabilities
   }); //asign schema
   const productSaved = await newProduct.save(); //post into db
   res.status(201).json(productSaved); //codigo de estado objeto creado

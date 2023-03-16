@@ -2,21 +2,10 @@ import { Schema, model } from "mongoose";
 
 const productSchema = new Schema(
   {
-    title: String,
-    category: String,
-    content: String,
-    domicilio: String,
-    telefono: Number,
-    facebook: String,
-    instragram: String,
-    web: String,
-    mail: String,
-    url: String,
-    imgCarrousel: Array,
-    repartoadomicilio: String,
-    mapa: String,
-    ofertas: String,
-    diasyhorarios: String,
+    company: String,
+    position: String,
+    duration: String,
+    responsabilities: Object
   },
   {
     timestamps: true,
