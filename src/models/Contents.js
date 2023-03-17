@@ -5,7 +5,7 @@ const contentSchema = new Schema(
     company: String,
     position: String,
     duration: String,
-    responsabilities: Object
+    responsabilities: [String],
   },
   {
     timestamps: true,

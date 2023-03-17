@@ -5,13 +5,13 @@ export const createContent = async (req, res) => {
     company,
     position,
     duration,
-    responsabilities
+    responsabilities,
   } = req.body; //destructuring - obteniendo datos del body
   const newContent = new Content({
     company,
     position,
     duration,
-    responsabilities
+    responsabilities,
   }); //asign schema
   const contentSaved = await newContent.save(); //post into db
   res.status(201).json(contentSaved); //codigo de estado objeto creado
